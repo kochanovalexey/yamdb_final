@@ -1,7 +1,8 @@
 from datetime import date
+
+from api.utils import get_count_rating
 from rest_framework import serializers
-from reviews.models import User, Comment, Review, Category, Genre, Title
-from .utils import get_count_rating
+from reviews.models import Category, Comment, Genre, Review, Title, User
 
 
 class UserSerializer(serializers.ModelSerializer):

@@ -1,5 +1,5 @@
-from reviews.models import Review
 from django.db.models import Avg
+from reviews.models import Review
 
 
 def get_count_rating(self, obj):

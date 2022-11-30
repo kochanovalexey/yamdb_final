@@ -2,7 +2,6 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 from django.db import models
 
-
 TITLE_SYMBOLS_RESTRICTION = 15
 
 

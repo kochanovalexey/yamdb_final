@@ -7,19 +7,28 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from reviews.models import Category, Comment, Genre, Review, Title, User
 
 from api_yamdb.settings import DEFAULT_FROM_EMAIL
-
-from .permissions import (AuthorModeratorAdminOrReadOnly, IsAdminOrReadOnly,
-                          IsAdminOrSuperUser)
-from .serializers import (CategorySerializer, CommentSerializer,
-                          EmailSerializer, GenreSerializer, ReviewSerializer,
-                          TitleBaseSerializer, TitleAddSerializer,
-                          ConfirmationCodeSerializer, UserSerializer)
+from api.permissions import (
+    AuthorModeratorAdminOrReadOnly,
+    IsAdminOrReadOnly,
+    IsAdminOrSuperUser
+)
+from api.serializers import (
+    CategorySerializer,
+    CommentSerializer,
+    ConfirmationCodeSerializer,
+    EmailSerializer,
+    GenreSerializer,
+    ReviewSerializer,
+    TitleAddSerializer,
+    TitleBaseSerializer,
+    UserSerializer
+)
 
 
 @api_view(['POST'])
