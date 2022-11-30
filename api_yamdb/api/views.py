@@ -1,4 +1,11 @@
 from api.filters import TitleFilter
+from api.permissions import (AuthorModeratorAdminOrReadOnly, IsAdminOrReadOnly,
+                             IsAdminOrSuperUser)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             ConfirmationCodeSerializer, EmailSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             TitleAddSerializer, TitleBaseSerializer,
+                             UserSerializer)
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
@@ -13,22 +20,6 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from reviews.models import Category, Comment, Genre, Review, Title, User
 
 from api_yamdb.settings import DEFAULT_FROM_EMAIL
-from api.permissions import (
-    AuthorModeratorAdminOrReadOnly,
-    IsAdminOrReadOnly,
-    IsAdminOrSuperUser
-)
-from api.serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    ConfirmationCodeSerializer,
-    EmailSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleAddSerializer,
-    TitleBaseSerializer,
-    UserSerializer
-)
 
 
 @api_view(['POST'])
