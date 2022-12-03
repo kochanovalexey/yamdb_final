@@ -62,9 +62,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            docker-compose pull kodin/yamdb_final
-            docker-compose stop $(sudo docker ps -a -q)
-            docker-compose run --rm -d kodin/yamdb_final
+            sudo docker-compose pull kodin/yamdb_final:latest
+            sudo docker-compose stop $(sudo docker ps -a -q)
+            sudo docker-compose run --rm -d kodin/yamdb_final
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
