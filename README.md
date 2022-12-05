@@ -1,6 +1,7 @@
 # yamdb_final
 ![status yamdb_workflow.yml](https://github.com/kochanovalexey/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 ## Описание проекта
+
 api_yamdb - проект, в котором пользователи могут делиться отзывами о художественных произведениях при помощи API. Сами произведения на сервисе не хранятся. Фукнции сервиса:
 
 1. Создание нового пользователя и получения токена для авторизации
