@@ -15,6 +15,7 @@ api_yamdb - проект, в котором пользователи могут 
 * nginx - содержит nginx
 
 ## Команды для запуска проекта:
+
 Обновить <b>pip</b>:
 ```
 python -m pip install --upgrade pip
